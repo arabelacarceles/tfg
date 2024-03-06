@@ -1,0 +1,9 @@
+{
+	"name": "Provincias",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4898fb34-fd64-465f-ba75-8f445d943b71",
+		"tenantId": "6afea85d-c323-4270-b69d-a4fb3927c254"
+	}
+}

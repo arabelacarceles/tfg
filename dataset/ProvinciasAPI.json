@@ -1,0 +1,13 @@
+{
+	"name": "ProvinciasAPI",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceProvincias",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
