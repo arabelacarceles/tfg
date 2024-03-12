@@ -5,20 +5,20 @@
 		"factoryName": {
 			"value": "Provincias"
 		},
-		"AzureTableStorage1_connectionString": {
-			"value": ""
-		},
 		"AzureFunction1_functionKey": {
 			"value": ""
 		},
-		"RestServiceProvincias_properties_typeProperties_url": {
-			"value": "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/Listados/Provincias/"
+		"AzureTableStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureFunction1_properties_typeProperties_functionAppUrl": {
+			"value": "https://tfgarabela.azurewebsites.net"
 		},
 		"RestServiceProductos_properties_typeProperties_url": {
 			"value": "https://api.precioil.es/"
 		},
-		"AzureFunction1_properties_typeProperties_functionAppUrl": {
-			"value": "https://tfgarabela.azurewebsites.net"
+		"RestServiceProvincias_properties_typeProperties_url": {
+			"value": "https://sedeaplicaciones.minetur.gob.es/ServiciosRESTCarburantes/PreciosCarburantes/Listados/Provincias/"
 		},
 		"containerUri": {
 			"value": ""
