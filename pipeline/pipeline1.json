@@ -81,6 +81,27 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Azure Function1",
+				"type": "AzureFunctionActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"functionName": "tfg",
+					"method": "GET"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureFunction1",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"annotations": [],
