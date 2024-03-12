@@ -83,8 +83,8 @@
 				]
 			},
 			{
-				"name": "Azure Function1",
-				"type": "AzureFunctionActivity",
+				"name": "Copy data1",
+				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -93,15 +93,71 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Destination",
+						"value": "productos"
+					}
+				],
 				"typeProperties": {
-					"functionName": "tfg",
-					"method": "GET"
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "AzureTableSink",
+						"azureTableInsertType": "merge",
+						"azureTablePartitionKeyName": "TipoDeFuel",
+						"writeBatchSize": 100003
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['nombreEstacion']"
+								},
+								"sink": {
+									"name": "NombreEstación"
+								}
+							},
+							{
+								"source": {
+									"path": "$['fuelTypeName']"
+								},
+								"sink": {
+									"name": "TipoDeFuel"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ultimoPrecio']"
+								},
+								"sink": {
+									"name": "Precio"
+								}
+							}
+						]
+					}
 				},
-				"linkedServiceName": {
-					"referenceName": "AzureFunction1",
-					"type": "LinkedServiceReference"
-				}
+				"inputs": [
+					{
+						"referenceName": "ProductosAPI",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureTable1",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"annotations": [],
