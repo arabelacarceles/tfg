@@ -1,0 +1,12 @@
+{
+	"name": "ProductosAPI",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceProductos",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
